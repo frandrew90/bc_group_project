@@ -1,0 +1,545 @@
+.header {
+  z-index: 2;
+  & > .container {
+    margin: 0 auto;
+    margin-top: 6px;
+  }
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (min-width: 768px) {
+      margin-top: 37px;
+    }
+    @media screen and (min-width: 1280px) {
+      max-width: 1080px;
+    }
+  }
+  width: 100%;
+  position: fixed;
+  background-color: $hero-bg-color;
+  opacity: 0.9;
+  opacity: 0.9;
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    background-color: $hero-bg-color;
+    background: none;
+  }
+  &-button {
+    border: none;
+    cursor: pointer;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+  &-buttons {
+    display: flex;
+  }
+}
+.header-logo {
+  max-width: 200px;
+  max-height: 50px;
+  display: block;
+}
+.header-nav {
+  display: none;
+  &-item {
+    font-size: 16px;
+    line-height: 1.3;
+
+    & > a {
+      text-decoration: none;
+      color: $secondary-text-color;
+    }
+  }
+  &-item + &-item {
+    margin-left: 30px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: flex;
+    align-items: center;
+  }
+  .header-nav-link:hover,
+  :focus {
+    color: $primary-accent-color;
+  }
+}
+.button-inverse {
+  display: block;
+  border-radius: 22px;
+  padding: 10px 32px;
+  border: none;
+
+  color: $secondary-text-color;
+  background-color: $primary-accent-color;
+}
+
+.header-button {
+  font-weight: 700;
+  width: 160px;
+  height: 44px;
+  background-color: $secondary-text-color;
+  border-radius: 22px;
+  display: none;
+  margin-left: 30px;
+  color: $primary-accent-color;
+
+  &-icon {
+    width: 12px;
+    height: 12px;
+    margin-left: 12px;
+    fill: $primary-accent-color;
+  }
+  &:hover,
+  :focus {
+    background: $hover-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @media screen and (min-width: 1280px) {
+    margin-right: 25px;
+  }
+}
+
+.hamburger-inner {
+  width: 20px;
+  height: 2px;
+  background-color: $primary-accent-color;
+}
+.hamburger-inner::after {
+  width: 20px;
+  height: 2px;
+  margin-bottom: 6px;
+  background-color: $primary-accent-color;
+}
+.hamburger-inner::before {
+  margin-top: 6px;
+  width: 20px;
+  height: 2px;
+  background-color: $primary-accent-color;
+}
+.hamburger.is-active .hamburger-inner {
+  background-color: $primary-accent-color;
+}
+.hamburger.is-active .hamburger-inner:after {
+  background-color: $primary-accent-color;
+}
+.hamburger.is-active .hamburger-inner:before {
+  background-color: $primary-accent-color;
+}
+
+.hamburger {
+  margin-top: 11px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  width: 20px;
+  height: 12px;
+  co &:focus,
+  & :hover {
+    transform: scale(1.5);
+  }
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+// hero
+
+.hero {
+  background-color: $hero-bg-color;
+  .hero-button-list {
+    display: flex;
+  }
+  &-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    font-family: DM Sans;
+    font-size: 8px;
+    width: 62px;
+    height: 24px;
+    background-color: $primary-accent-color;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    color: $secondary-text-color;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+
+    @media screen and (min-width: 1280px) {
+      font-size: 14px;
+      width: 104px;
+      height: 40px;
+    }
+  }
+  &-button:hover,
+  &-button:focus {
+    background-color: #c7133e;
+  }
+  &-button-revers {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    font-size: 8px;
+    width: 82px;
+    height: 24px;
+    background-color: $secondary-text-color;
+    color: $primary-accent-color;
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    @media screen and (min-width: 1280px) {
+      font-size: 14px;
+      width: 138px;
+      height: 40px;
+    }
+  }
+  &-button-revers:hover,
+  &-button-revers:focus {
+    background-color: $hover-color;
+  }
+  .hero-button {
+    margin-right: 8px;
+  }
+  & > .container {
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    background-repeat: no-repeat;
+    background-position-x: 80%;
+    background-position-y: 100%;
+
+    @media screen and (min-width: 768px) {
+      flex-wrap: wrap;
+
+      margin: 0 auto;
+    }
+    @media screen and (min-width: 1280px) {
+      margin: 0 auto;
+    }
+  }
+  &-arrow-right {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: none;
+    background-color: $secondary-text-color;
+    margin-top: 8px;
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-top: 20px;
+      height: 26px;
+      width: 26px;
+    }
+    &-icon {
+      max-width: 6px;
+      max-height: 12px;
+      display: block;
+      margin: auto;
+      fill: $primary-accent-color;
+    }
+    &:hover &-icon,
+    &:focus &-icon {
+      fill: $hover-color;
+    }
+    &:hover,
+    &:focus {
+      border: 2px solid $hover-color;
+      box-shadow: 0px 0px 0px 1px $primary-accent-color;
+      background-color: $primary-accent-color;
+    }
+  }
+  &-paragraf-section {
+    display: flex;
+    @media screen and (min-width: 768px) {
+      margin-left: 139px;
+      margin-bottom: 34px;
+    }
+    @media screen and (min-width: 1280px) {
+      margin-left: 210px;
+      margin-bottom: 56px;
+    }
+  }
+  &-possition {
+    @media screen and (min-width: 768px) {
+      flex-basis: calc(100% / 2);
+    }
+  }
+  &-title {
+    font-family: Titan One;
+    font-size: 26px;
+    line-height: 1.15;
+    text-transform: uppercase;
+    color: $secondary-text-color;
+    margin-bottom: 20px;
+    @media screen and (min-width: 768px) {
+      font-size: 22px;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 38px;
+    }
+    & > span {
+      font-size: 48px;
+      line-height: 96.5%;
+      text-transform: uppercase;
+      color: $primary-accent-color;
+      @media screen and (min-width: 768px) {
+        font-size: 34px;
+      }
+      @media screen and (min-width: 1280px) {
+        font-size: 58px;
+        margin-top: 15px;
+      }
+    }
+    &-section {
+      margin-top: 193px;
+      margin-bottom: 160px;
+
+      @media screen and (min-width: 768px) {
+        margin-top: 102px;
+        margin-bottom: 60px;
+      }
+      @media screen and (min-width: 1280px) {
+        margin-top: 171px;
+        margin-bottom: 112px;
+      }
+    }
+  }
+
+  &-paragraf {
+    display: none;
+    width: 114px;
+    font-size: 8px;
+    line-height: 150%;
+    color: $secondary-text-color;
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 14px;
+      width: 200px;
+    }
+  }
+
+  &-cafes {
+    width: 40px;
+    height: 40px;
+    display: none;
+    font-size: 8px;
+    line-height: 10px;
+    text-align: right;
+    color: $secondary-text-color;
+    @media screen and (min-width: 768px) {
+      display: block;
+      margin-top: 94px;
+      .hero-cafe + .hero-cafe {
+        margin-top: 13px;
+      }
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 14px;
+      margin-top: 156px;
+      margin-right: 77px;
+      .hero-cafe + .hero-cafe {
+        margin-top: 15px;
+      }
+    }
+  }
+  .hero-cafes-numbers {
+    position: relative;
+    font-family: Titan One;
+    font-size: 28px;
+    line-height: 1.14;
+    text-align: right;
+    text-transform: uppercase;
+    color: $primary-accent-color;
+    display: block;
+    @media screen and (min-width: 1280px) {
+      font-size: 44px;
+    }
+  }
+}
+.hero-cafes-numbers::before {
+  content: '';
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background-color: $secondary-text-color;
+  display: block;
+  top: -8%;
+  right: -20%;
+  z-index: -1;
+  @media screen and (min-width: 1280px) {
+    height: 30px;
+    width: 30px;
+    top: -15%;
+    right: -70%;
+  }
+}
+.hero-button-products {
+  cursor: pointer;
+}
+.hero-img-ice-cream {
+  max-width: 171px;
+}
+
+.thumb {
+  position: absolute;
+
+  z-index: -1;
+}
+.hero-img-houka {
+  left: 40%;
+  bottom: 0;
+  @media screen and (min-width: 768px) {
+    left: 50%;
+  }
+  @media screen and (min-width: 1280px) {
+    left: 46%;
+  }
+  &::before {
+    content: '';
+    display: block;
+    width: 346px;
+    height: 344px;
+    position: absolute;
+    z-index: -2;
+    background-color: #ffa5ba;
+    border-radius: 50%;
+    bottom: 18%;
+    right: -50%;
+
+    @media screen and (min-width: 768px) {
+      width: 324px;
+      height: 322px;
+      bottom: 15%;
+      right: -80%;
+    }
+    @media screen and (min-width: 1280px) {
+      width: 538px;
+      height: 538px;
+      bottom: 13%;
+      right: -80%;
+    }
+  }
+}
+
+.hero-img-girl {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    right: 0;
+    bottom: 0;
+  }
+  @media screen and (min-width: 1280px) {
+    display: block;
+    right: 0;
+    bottom: 0;
+  }
+}
+.hero-img-milk {
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    left: 2%;
+    bottom: 5%;
+  }
+}
+
+.hero-header-hover {
+  transition-property: color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-wrap {
+  .modal-to-buy {
+    z-index: 5;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 450px;
+    height: auto;
+    background-color: #fff5f6;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 40px;
+    @media screen and (min-width: 1280px) {
+      top: 70%;
+    }
+  }
+  .to-buy-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: $primary-accent-color;
+    margin-bottom: 15px;
+    padding-top: 15px;
+  }
+  .you-buy-position {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    .to-buy-lable {
+      width: 100%;
+      margin-bottom: 8px;
+      font-size: 12px;
+      line-height: 1.16;
+      color: #907e82;
+    }
+  }
+
+  .to-bue-form-comment {
+    resize: none;
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    margin-bottom: 20px;
+  }
+
+  .to-bue-form-comment::placeholder {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
+
+  .to-bue-icon-close {
+    fill: $primary-accent-color;
+    width: 15px;
+    height: 15px;
+    .modal-close-btn:hover & {
+      fill: $primary-bg-color;
+    }
+  }
+  .to-buy-input {
+    padding: 6px 4px 6px 4px;
+    margin-bottom: 5px;
+  }
+}
+.to-buy-select {
+  padding: 6px 4px;
+  background-color: #fff;
+}
